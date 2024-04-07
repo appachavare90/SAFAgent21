@@ -3,11 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNGDemo.FirstTestDemo">
+      <class name="TestCases.LoginPageTest">
         <methods>
-          <include name="test"/>
+          <include name="loginTest"/>
+          <include name="safAgentLogoTest"/>
+          <include name="tearDown"/>
+          <include name="loginPageTitleTest"/>
+          <include name="forgotPasswordLinkTest"/>
+          <include name="loginEmptyCredentialsTest"/>
+          <include name="loginInvalidCredentialsTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- TestNGDemo.FirstTestDemo -->
+      </class> <!-- TestCases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
