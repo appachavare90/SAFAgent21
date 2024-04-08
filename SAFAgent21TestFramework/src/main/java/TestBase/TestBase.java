@@ -46,13 +46,13 @@ public class TestBase {
 			options.addArguments("--remote-allow-origins");
 			WebDriverManager.chromedriver().setup();
 			WebDriver driver=new ChromeDriver();
-		}
+
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
-		driver.get(prop.getProperty("https://saf.test.redcross.org/agent/console/filters/mywork"));
+		driver.get("https://saf.test.redcross.org/agent/console/filters/mywork");
 		
 	}
 
