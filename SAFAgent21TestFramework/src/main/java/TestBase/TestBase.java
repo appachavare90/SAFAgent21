@@ -37,13 +37,13 @@ public class TestBase {
 		String browserName=prop.getProperty("browser");
 		if(browserName.equals("chrome"))
 		{
-			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chromedriver-win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chromedriver-win32\\chromedriver.exe");
 //			ChromeOptions options=new ChromeOptions();
 //			options.setBinary("C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chrome-win64\\chrome-win64\\chrome.exe");
 			//driver=new ChromeDriver();
 			//WebDriverManager.chromedriver().browserVersion("119.0.6045.106");
 			
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("firefox"))
