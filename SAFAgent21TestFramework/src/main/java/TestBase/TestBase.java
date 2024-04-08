@@ -43,7 +43,8 @@ public class TestBase {
 //			options.setBinary("C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chrome-win64\\chrome-win64\\chrome.exe");
 			//driver=new ChromeDriver();
 			//WebDriverManager.chromedriver().browserVersion("119.0.6045.106");
-			
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--remote-allow-origins");
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
