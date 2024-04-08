@@ -45,7 +45,7 @@ public class TestBase {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("--remote-allow-origins");
 			WebDriverManager.chromedriver().setup();
-			 driver=new ChromeDriver();
+			 driver=new ChromeDriver(options);
 
 		
 		driver.manage().window().maximize();
