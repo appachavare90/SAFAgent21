@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestBase {
-	public static WebDriver driver;
+	//public static WebDriver driver;
 	public static Properties prop;
 	
 	public TestBase()
@@ -36,8 +36,7 @@ public class TestBase {
 	{
 		//String browserName=prop.getProperty("browser");
 		String browserName="chrome";
-		if(browserName.equals("chrome"))
-		{
+		
 	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chromedriver-win32\\chromedriver.exe");
 //			ChromeOptions options=new ChromeOptions();
 //			options.setBinary("C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chrome-win64\\chrome-win64\\chrome.exe");
@@ -46,17 +45,9 @@ public class TestBase {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("--remote-allow-origins");
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			WebDriver driver=new ChromeDriver();
 		}
-		else if(browserName.equals("firefox"))
-		{
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\M1023716\\OneDrive - Mindtree Limited\\Desktop\\Selenium\\Chrome Driver\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
-			driver=new FirefoxDriver();
-		}
-		else if(browserName.equals("edge"))
-		{
-			driver=new EdgeDriver();
-		}
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
