@@ -21,33 +21,14 @@ public class TestBase {
 	public TestBase()
 	{
 		
-		try {
-			prop = new Properties();
-			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\config\\data.properties");
-			prop.load(fis);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 	
 	public static void initilization()
 	{
-		//String browserName=prop.getProperty("browser");
-		String browserName="chrome";
-		
-	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chromedriver-win32\\chromedriver.exe");
-//			ChromeOptions options=new ChromeOptions();
-//			options.setBinary("C:\\Users\\61023716\\OneDrive - LTIMindtree\\Desktop\\Selenium\\chrome-win64\\chrome-win64\\chrome.exe");
-			//driver=new ChromeDriver();
-			//WebDriverManager.chromedriver().browserVersion("119.0.6045.106");
-			ChromeOptions options=new ChromeOptions();
-			options.addArguments("--remote-allow-origins");
-			WebDriverManager.chromedriver().setup();
-			 driver=new ChromeDriver(options);
-
-		
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
