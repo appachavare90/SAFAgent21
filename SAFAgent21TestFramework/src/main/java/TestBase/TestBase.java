@@ -23,7 +23,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\61023716\\git\\SafAgent20\\SAFAgent21TestFramework\\src\\main\\java\\config\\data.properties");
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\config\\data.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
