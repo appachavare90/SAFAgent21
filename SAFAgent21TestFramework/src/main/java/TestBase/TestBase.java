@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestBase {
-	//public static WebDriver driver;
+	public static WebDriver driver;
 	public static Properties prop;
 	
 	public TestBase()
@@ -45,7 +45,7 @@ public class TestBase {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("--remote-allow-origins");
 			WebDriverManager.chromedriver().setup();
-			WebDriver driver=new ChromeDriver();
+			 driver=new ChromeDriver();
 
 		
 		driver.manage().window().maximize();
