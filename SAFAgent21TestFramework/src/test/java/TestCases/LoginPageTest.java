@@ -50,7 +50,7 @@ public class LoginPageTest extends TestBase{
 	
 	@Test(priority = 4)
 	public void loginTest() {
-		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.login("tsafmgmt", "Password1!");
 		String actUrl=loginPage.validateURL();
 		String expectedUrl="https://saf.test.redcross.org/agent/console/filters/mywork";
 		assertEquals(actUrl, expectedUrl);
