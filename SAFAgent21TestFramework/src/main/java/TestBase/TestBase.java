@@ -60,7 +60,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("https://saf.test.redcross.org/agent/console/filters/mywork"));
 		
 	}
 
