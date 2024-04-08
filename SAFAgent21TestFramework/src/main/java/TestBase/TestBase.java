@@ -44,7 +44,7 @@ public class TestBase {
 			//driver=new ChromeDriver();
 			//WebDriverManager.chromedriver().browserVersion("119.0.6045.106");
 			
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("firefox"))
